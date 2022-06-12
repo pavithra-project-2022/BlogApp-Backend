@@ -12,7 +12,7 @@ mongoose
   .connect(
     "mongodb+srv://pavi:pavi@cluster0.ddyxg.mongodb.net/blogapp?retryWrites=true&w=majority"
   )
-  .then(() => app.listen(5000))
+  .then(() => app.listen(process.env.PORT||5000))
   .then(() =>
     console.log("Connected TO Database and Listening TO Localhost 5000")
   )
